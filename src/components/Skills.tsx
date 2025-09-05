@@ -12,7 +12,9 @@ const Skills = () => {
       icon: '⚙️',
       skills: [
         { name: 'Docker', level: 85, color: '#0db7ed' },
+        { name: 'Rancher (k8s)', level: 75, color: '#0075a8' },
         { name: 'Linux (Debian)', level: 80, color: '#fcc624' },
+        { name: 'Windows Server', level: 70, color: '#0078d4' },
         { name: 'TeamCity', level: 75, color: '#000000' },
         { name: 'Ansible', level: 70, color: '#ee0000' },
         { name: 'CI/CD', level: 80, color: '#00dddd' },
@@ -33,6 +35,9 @@ const Skills = () => {
       icon: '🗄️',
       skills: [
         { name: 'PostgreSQL', level: 80, color: '#336791' },
+        { name: 'MSSQL', level: 75, color: '#cc2927' },
+        { name: 'ClickHouse', level: 70, color: '#ffcc00' },
+        { name: 'Apache Kafka', level: 75, color: '#231f20' },
         { name: 'SQL', level: 85, color: '#00dddd' },
         { name: 'Postman', level: 75, color: '#ff6c37' },
         { name: 'BloomRpc', level: 65, color: '#00aa00' },

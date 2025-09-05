@@ -107,28 +107,9 @@ const Header = () => {
             <span className="w-2 h-2 bg-miku-cyan rounded-full animate-pulse"></span>
             Санкт-Петербург, м. Академическая
           </p>
-          <p className="text-miku-light">26 лет • Готов к переезду и командировкам</p>
+          <p className="text-miku-light">26 лет</p>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-miku-cyan rounded-full flex justify-center"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-miku-cyan rounded-full mt-2"
-            />
-          </motion.div>
-        </motion.div>
       </motion.div>
 
       {/* Floating geometric shapes */}

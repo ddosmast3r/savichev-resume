@@ -72,16 +72,16 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mb-16">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6 h-full flex flex-col"
           >
-            <div className="glass p-8 rounded-2xl">
+            <div className="glass p-6 sm:p-8 rounded-2xl flex-1">
               <h3 className="text-2xl font-semibold text-miku-light mb-6">
                 Контактная информация
               </h3>
@@ -144,19 +144,17 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="glass p-6 rounded-xl"
+              className="glass p-6 rounded-xl h-16 flex items-center justify-center"
             >
-              <div className="flex items-center justify-center">
-                <div className="flex items-center space-x-3">
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="w-3 h-3 bg-green-400 rounded-full"
-                  />
-                  <span className="text-miku-light font-semibold">
-                    Открыт к предложениям
-                  </span>
-                </div>
+              <div className="flex items-center space-x-3">
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="w-3 h-3 bg-green-400 rounded-full"
+                />
+                <span className="text-miku-light font-semibold">
+                  Открыт к предложениям
+                </span>
               </div>
             </motion.div>
           </motion.div>
@@ -167,9 +165,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="space-y-6 h-full flex flex-col"
           >
-            <div className="glass p-8 rounded-2xl">
+            <div className="glass p-6 sm:p-8 rounded-2xl text-center flex-1 flex flex-col justify-between">
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
@@ -184,16 +182,16 @@ const Contact = () => {
               
               <p className="text-gray-300 mb-8 leading-relaxed">
                 Ищу позицию SRE Engineer Middle в динамичной команде. 
-                Готов к переезду, командировкам и удаленной работе.
+                Открыт для удаленной работы и интересных проектов.
               </p>
               
               <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col gap-4">
                   <motion.a
                     href="mailto:mistersavichev@yandex.ru"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-miku-cyan to-miku-teal text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 hover:shadow-miku-cyan/30"
+                    className="bg-gradient-to-r from-miku-cyan to-miku-teal text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:shadow-lg transition-all duration-300 hover:shadow-miku-cyan/30 text-center"
                   >
                     📧 Связаться
                   </motion.a>
@@ -204,18 +202,18 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 text-center"
                   >
                     💬 Telegram
                   </motion.a>
                   
                   <motion.a
-                    href="/Резюме_SRE_Engineer_Junior_Middle_Дмитрий_Савичев_от_29_08_2025.pdf"
+                    href="/Резюме - Савичев Дмитрий.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30 text-center"
                   >
                     📄 Резюме
                   </motion.a>
@@ -227,34 +225,24 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Spacer block for symmetry */}
+            <div className="glass p-6 rounded-xl h-16 flex items-center justify-center">
+              <div className="flex items-center space-x-3">
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  className="text-2xl"
+                >
+                  ⚡
+                </motion.div>
+                <span className="text-miku-light font-semibold">
+                  Быстрый отклик
+                </span>
+              </div>
+            </div>
           </motion.div>
         </div>
 
-        {/* Footer Bottom */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-700/50 pt-8 text-center"
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400">
-              © 2025 Дмитрий Савичев. Фанат Хацунэ Мику 💙
-            </p>
-            <div className="flex items-center space-x-2 text-gray-400">
-              <span>Сделано с</span>
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-                className="text-miku-accent"
-              >
-                💙
-              </motion.span>
-              <span>и Next.js</span>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </footer>
   )

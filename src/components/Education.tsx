@@ -40,11 +40,6 @@ const Education = () => {
       content: 'Категория B'
     },
     {
-      title: 'Готовность',
-      icon: '✈️',
-      content: 'К переезду и командировкам'
-    },
-    {
       title: 'Формат работы',
       icon: '💼',
       content: 'Полный день, удаленная работа'
@@ -171,7 +166,7 @@ const Education = () => {
             Дополнительная информация
           </h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {additionalInfo.map((info, index) => (
               <motion.div
                 key={info.title}
@@ -180,7 +175,7 @@ const Education = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10, rotateY: 5 }}
-                className="glass p-6 rounded-xl text-center group cursor-pointer"
+                className="glass p-6 rounded-xl text-center group cursor-pointer w-64 max-w-full"
               >
                 <motion.div
                   animate={{ rotate: [0, 10, -10, 10, 0] }}
